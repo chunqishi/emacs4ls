@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Emacs4ls : Emacs 4 Latex Support (Windows)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Emacs4ls</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chunqishi/emacs4ls">View on GitHub</a>
+
+          <h1 id="project_title">Emacs4ls</h1>
+          <h2 id="project_tagline">Emacs 4 Latex Support (Windows)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chunqishi/emacs4ls/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chunqishi/emacs4ls/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="emacs-4-latex-support-windows" class="anchor" href="#emacs-4-latex-support-windows"><span class="octicon octicon-link"></span></a>Emacs 4 Latex Support (Windows)</h1>
+
+<p>Chunqi Shi (<a href="mailto:chunqi.shi@hotmail.com">chunqi.shi@hotmail.com</a>)</p>
+
+<h2>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h2>
+
+<ul>
+<li>2013-04-25</li>
+</ul><h2>
+<a name="version" class="anchor" href="#version"><span class="octicon octicon-link"></span></a>Version</h2>
+
+<ul>
+<li>0.2.1</li>
+<li>Tested under Window 7 Home Premium.</li>
+</ul><h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<ul>
+<li>Configure a Emacs editor for latex compile in Windows environment.</li>
+<li>An easy installation of Emacs as latex editor for newbie.</li>
+</ul><h2>
+<a name="change-log" class="anchor" href="#change-log"><span class="octicon octicon-link"></span></a>Change Log</h2>
+
+<ul>
+<li>Add: shortcut to desktop.</li>
+<li>Add: register file for texfiles(*.tex, *.bib, *.sty, *.cls).</li>
+<li>Add: tiny tools: 1) convert pdf to eps; 2) merge bibtex</li>
+<li>Fix: Emacs.bat open file error, when filename has space.</li>
+</ul><h2>
+<a name="built-in-plugins" class="anchor" href="#built-in-plugins"><span class="octicon octicon-link"></span></a>Built-in Plugins</h2>
+
+<ul>
+<li>Aspell 0.50.3 (4 Spelling Check)</li>
+<li>backup-each-save 2011-08-03 (4 Backup Each Edition)</li>
+<li>Sumatra PDF 2.2.1 (4 PDF Viewer) [CTR+c CTR+v]</li>
+<li>Predictive Mode 0.23.13 (Tips for Word Completion) [CTR+x TAB]</li>
+<li>goto-last-change 1.2 (Go to Last Change) [CTR+x ,]
+## Portable</li>
+</ul><p>Register: Emacs_Register.bat; <em>Run as Administrator</em> 
+(move .emacs to %HOME%; add Desktop shortcut; add %PATH%;)</p>
+
+<h2>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<h3>
+<a name="texlive-2012" class="anchor" href="#texlive-2012"><span class="octicon octicon-link"></span></a>TexLive 2012:</h3>
+
+<p><a href="http://www.tug.org/texlive/acquire-netinstall.html">http://www.tug.org/texlive/acquire-netinstall.html</a></p>
+
+<h3>
+<a name="emacs-243" class="anchor" href="#emacs-243"><span class="octicon octicon-link"></span></a>Emacs 24.3:</h3>
+
+<p><a href="http://ftp.gnu.org/gnu/emacs/windows/">http://ftp.gnu.org/gnu/emacs/windows/</a></p>
+
+<h3>
+<a name="auctex-1187" class="anchor" href="#auctex-1187"><span class="octicon octicon-link"></span></a>Auctex 11.87:</h3>
+
+<p><a href="http://www.gnu.org/software/auctex/download-for-windows.html">http://www.gnu.org/software/auctex/download-for-windows.html</a></p>
+
+<h3>
+<a name="sumatrapdf-250" class="anchor" href="#sumatrapdf-250"><span class="octicon octicon-link"></span></a>SumatraPDF 2.5.0:</h3>
+
+<p><a href="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html</a></p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<h3>
+<a name="unzip" class="anchor" href="#unzip"><span class="octicon octicon-link"></span></a>UNZIP:</h3>
+
+<ul>
+<li>into %TEXLIVE_HOME%, exists %TEXLIVE_HOME%/install-tl*/install-t1-advanced.bat </li>
+<li>into %EMACS_HOME%, exists %EMACS_HOME%/bin </li>
+<li>into %AUCTEX_HOME%, exists %AUCTEX_HOME%/site-lisp/auctex </li>
+<li>into %EMACS4LS_HOME%, exists %EMACS4LS_HOME%/bin
+### COPY: </li>
+<li>from %AUCTEX_HOME%/* to %EMACS_HOME%/ --&gt; (Install Auctext into Emacs) </li>
+<li>from %EMACS4LS_HOME%/* to %EMACS_HOME%/ --&gt; (Install Emacs4LS into Emacs) </li>
+<li>from %SumatraPDF*.exe to %EMACS_HOME%/bin/SumatraPDF.exe --&gt; (Update SumatraPDF into Emacs)
+### RUN: </li>
+<li>run %TEXLIVE_HOME%/install-tl-*/install-tl-advanced.bat --&gt; (Install Texlive 2012) </li>
+<li>run %EMACS_HOME%/Emacs_Register.bat --&gt; (Register .emacs plugins)
+### PATH: </li>
+<li>add %EMACS_HOME%\bin\ into %PATH% of OS Environment </li>
+<li>add %EMACS_HOME%\aspell\bin\ into %PATH% of OS Environment
+## Tiny Tools</li>
+</ul><h3>
+<a name="emacs_mgbibbat" class="anchor" href="#emacs_mgbibbat"><span class="octicon octicon-link"></span></a>Emacs_MGBib.bat</h3>
+
+<ul>
+<li>
+<a href="https://github.com/usage" class="user-mention">@usage</a>: Emacs_MGBib.bat file1.bib file2.bib file3.bib ... </li>
+<li>
+<a href="https://github.com/description" class="user-mention">@description</a>: merge bible files
+### Emacs_PDF2PS.bat </li>
+<li>
+<a href="https://github.com/usage" class="user-mention">@usage</a>: Emacs_PDF2PS.bat file1.pdf file2.pdf file3.pdf ... </li>
+<li>
+<p><a href="https://github.com/description" class="user-mention">@description</a>: convert pdf to eps (figures)</p>
+
+<h2>
+<a name="more" class="anchor" href="#more"><span class="octicon octicon-link"></span></a>More</h2>
+</li>
+<li><p>Register into Right Click Menu:  use FileMenuTools;</p></li>
+<li>
+<p>Create Shortcut:  refer to emacs (shortcut) under %EMACS_HOME%;</p>
+
+<h2>
+<a name="keys" class="anchor" href="#keys"><span class="octicon octicon-link"></span></a>Keys</h2>
+</li>
+<li><p>Key Bindings | F1 b | CTR+H b</p></li>
+<li>Jump to Reference | CTR+C &amp;</li>
+<li>Key Manual | CTR+H k</li>
+<li>
+<p>Predict Model | CTR+X tab</p>
+
+<h2>
+<a name="links" class="anchor" href="#links"><span class="octicon octicon-link"></span></a>Links</h2>
+</li>
+<li><p>Latex Symbols</p></li>
+<li>Auctex Shortcuts </li>
+<li>Emacs Shortcut </li>
+<li>Das Latex-Buch (Install LaTeX for Windows 7 - a complete setup)</li>
+<li>From Latex to HTML</li>
+<li>BibTeX and bibliography styles (examples)</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Emacs4ls maintained by <a href="https://github.com/chunqishi">chunqishi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
