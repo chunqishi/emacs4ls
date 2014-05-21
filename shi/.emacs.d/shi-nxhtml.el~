@@ -1,0 +1,6 @@
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/nxhtml"))
+
+(load "~/.emacs.d/shi-lisp/nxhtml/autostart.el")
+
+(provide 'shi-nxhtml)

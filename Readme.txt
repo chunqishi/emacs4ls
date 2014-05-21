@@ -1,0 +1,1 @@
+Please run "Run_Me_Emacs_Register.bat" as Administrator 

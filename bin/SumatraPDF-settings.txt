@@ -1,0 +1,371 @@
+﻿# For documentation, see http://blog.kowalczyk.info/software/sumatrapdf/settings2.5.html
+
+MainWindowBackground = #80fff200
+EscToExit = false
+ReuseInstance = false
+FixedPageUI [
+	TextColor = #000000
+	BackgroundColor = #ffffff
+	SelectionColor = #f5fc0c
+	WindowMargin = 2 4 2 4
+	PageSpacing = 4 4
+]
+EbookUI [
+	FontName = Georgia
+	FontSize = 12.5
+	TextColor = #5f4b32
+	BackgroundColor = #fbf0d9
+	UseFixedPageUI = false
+]
+ComicBookUI [
+	WindowMargin = 0 0 0 0
+	PageSpacing = 4 4
+	CbxMangaMode = false
+]
+ChmUI [
+	UseFixedPageUI = false
+]
+ExternalViewers [
+]
+ShowMenubar = true
+ZoomLevels = 8.33 12.5 18 25 33.33 50 66.67 75 100 125 150 200 300 400 600 800 1000 1200 1600 2000 2400 3200 4800 6400
+ZoomIncrement = 0
+PrinterDefaults [
+	PrintScale = shrink
+	PrintAsImage = false
+]
+ForwardSearch [
+	HighlightOffset = 0
+	HighlightWidth = 15
+	HighlightColor = #6581ff
+	HighlightPermanent = false
+]
+ReloadModifiedDocuments = true
+CustomScreenDPI = 0
+
+RememberStatePerDocument = true
+UiLanguage = en
+ShowToolbar = true
+ShowFavorites = false
+AssociateSilently = false
+CheckForUpdates = true
+VersionToSkip = 2.5.2
+RememberOpenedFiles = true
+UseSysColors = false
+InverseSearchCmdLine = C:\emacs-24.3\bin\\emacsclientw.exe --alternate-editor="C:\emacs-24.3\bin\\runemacs.exe" --no-wait +%l "%f"
+EnableTeXEnhancements = true
+DefaultDisplayMode = book view
+DefaultZoom = 100
+WindowState = 2
+WindowPos = 447 0 785 728
+ShowToc = true
+SidebarDx = 187
+TocDy = 0
+ShowStartPage = true
+
+FileStates [
+	[
+		FilePath = c:\emacs-24.3\example\emacs_shortcut.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 132
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = false
+		SidebarDx = 187
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = d:\mesh\thesis\latex\thesis_shi_2013.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 823
+		PageNo = 118
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = true
+		SidebarDx = 187
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 52 70 72
+	]
+	[
+		FilePath = d:\mesh\ngc\latex\ngc2013.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 660
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = false
+		SidebarDx = 187
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = D:\mesh\icws\latex\icws2012\icws2012.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 127
+		PageNo = 5
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = false
+		SidebarDx = 187
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = d:\mesh\thesis\latex\thesis_shi.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 10 252
+		PageNo = 3
+		Zoom = 125
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = true
+		SidebarDx = 365
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 3 5
+	]
+	[
+		FilePath = d:\mesh\survey\latex\survey2012.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 165
+		PageNo = 8
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = false
+		SidebarDx = 224
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\thesis-crop.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\thesis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 102
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\Thesis, SHI, 2013-04-6-crop.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\Thesis, SHI, 2013-04-6.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Downloads\ca.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 138
+		PageNo = 22
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\Student_preference.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\ca.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 87
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\Users\windows\Desktop\conceptual approach.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = book view
+		ScrollPos = -1 -1
+		PageNo = 22
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 0 0 785 728
+		ShowToc = false
+		SidebarDx = 383
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = d:\mesh\iui\latex\iui2013.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 497
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 447 0 785 728
+		ShowToc = true
+		SidebarDx = 192
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+]
+TimeOfLastUpdateCheck = 30373158 1003316248
+OpenCountWeek = 176

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML xmlns="http://www.w3.org/1999/xhmlt">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <META http-equiv="author" content="Chunqi Shi (chunqi.shi@hotmail.com)" />
+
+    <TITLE> Chunqi Shi -- Emacs 4 Latex Support</TITLE>     
+  </HEAD>
+  <BODY>
+    <H1>Emacs 4 Latex Support (Windows)</H1>
+    <P>Chunqi Shi (chunqi.shi@hotmail.com)</P>
+    <H2>Update</H2>
+    <UL>
+      <LI> 2013-04-23 </LI>
+    </UL>  
+
+    <H2>Version</H2>
+    <UL>
+      <LI> 0.2 </LI>
+      <LI> Tested under Window 7 Home Premium. </LI>
+    </UL>  
+
+    <H2>About</H2>
+    <UL>
+      <LI>Configure a Emacs editor for latex compile in Windows
+      environment.</LI>
+      <LI>An easy installation of Emacs as latex editor for
+      newbie.</LI>
+    </UL> 
+
+    <H2>Change Log</H2>
+    <UL>
+      <LI>Add: plugin goto-last-change.</LI>
+      <LI>Add: plugin Predictive Model.</LI>
+      <LI>Fix: Sumatra PDF double click to open Emacs, even closed.</LI>
+      <LI>Fix: Default %HOME% by %APPDATA%, no %USERPROFILE%.</LI>
+      <LI>Fix: Delete old link to mklink to new .emacs.</LI>
+    </UL> 
+
+
+    <H2>Built-in Plugins</H2>
+    <UL>
+      <LI><A TARGET="_blank" HREF="http://aspell.net/win32/">Aspell 0.50.3</A> (4 Spelling Check)</LI>
+      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/BackupEachSave">backup-each-save 2011-08-03</A> (4 Backup Each Edition)</LI>
+      <LI><A TARGET="_blank" HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">Sumatra PDF 2.2.1</A> (4 PDF Viewer) [CTL+c CTL+v]</LI>
+      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/PredictiveMode">Predictive Mode 0.23.13</A> (Tips for Word Completion) [CTL+x TAB]</LI>
+      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/goto-last-change.el">goto-last-change 1.2</A> (Go to Last Change) [CTL+x ,]</LI>
+    </UL>  
+
+    <H2>Download</H2>
+    <UL>
+      <LI>TexLive 2012:
+	<BR/><A HREF="http://www.tug.org/texlive/acquire-netinstall.html" TARGET="_blank">http://www.tug.org/texlive/acquire-netinstall.html</A></LI>
+      
+      <LI>Emacs 24.3:
+	<BR/><A HREF="http://ftp.gnu.org/gnu/emacs/windows/" TARGET="_blank">http://ftp.gnu.org/gnu/emacs/windows/</A></LI>
+      <LI>Auctex 11.87:
+	<BR/><A HREF="http://www.gnu.org/software/auctex/download-for-windows.html" TARGET="_blank">http://www.gnu.org/software/auctex/download-for-windows.html</A></LI>
+      <LI>SumatraPDF 2.2.1:
+	<BR/><A HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html" TARGET="_blank">http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html</A></LI>      
+      <LI>Emacs4LS 0.2 (Emacs for Latex Support)-(2013.04.23)
+	<BR/><A HREF="http://www.ai.soc.i.kyoto-u.ac.jp/~shi/files/Emacs4LS_0.2.zip" TARGET="_blank">Emacs4LS_0.2.zip</A></LI>
+      <!--LI>Emacs_SumatraPDF.bat
+	<BR/><A HREF="files/Emacs_SumatraPDF.bat" TARGET="_blank">Emacs_SumatraPDF.bat</A></LI-->
+      <!--LI>Aspell 0.60.3 (2005):
+	<BR/><A HREF="http://www.nosq.com/download/Aspell-win32-0.60.3-en-US.zip" TARGET="_blank">http://www.nosq.com/download/Aspell-win32-0.60.3-en-US.zip</A></LI-->      
+    </UL>
+
+    <H2>Install</H2>
+    <OL>
+      <LI> UNZIP:
+	<BR/> into %TEXLIVE_HOME%, exists %TEXLIVE_HOME%/install-tl*/install-t1-advanced.bat
+	<BR/> into %EMACS_HOME%, exists %EMACS_HOME%/bin
+	<BR/> into %AUCTEX_HOME%, exists %AUCTEX_HOME%/site-lisp/auctex
+	<BR/> into %EMACS4LS_HOME%, exists %EMACS4LS_HOME%/bin </LI>
+      <LI> COPY:
+	<BR/> from %AUCTEX_HOME%/* to %EMACS_HOME%/    --> (Install Auctext into Emacs)
+	<BR/> from %EMACS4LS_HOME%/* to %EMACS_HOME%/  -->  (Install Emacs4LS into Emacs)
+	<BR/> from %SumatraPDF*.exe to %EMACS_HOME%/bin/SumatraPDF.exe -->  (Update SumatraPDF into Emacs) </LI>
+      <LI> RUN:
+
+	<BR/> run %TEXLIVE_HOME%/install-tl-*/install-tl-advanced.bat --> (Install Texlive 2012)
+	<BR/> run %EMACS_HOME%/Emacs_Register.bat  -->  (Register .emacs plugins)</LI>
+      <LI> PATH:
+	<BR/>add %EMACS_HOME%\bin\  into %PATH% of OS Environment
+	<BR/>add %EMACS_HOME%\aspell\bin\  into %PATH% of OS Environment
+      </LI>
+    </OL>  
+
+    <H2>More</H2>
+    <UL>
+      <!--LI> Register:
+	<BR/> ftype texfile="runemacs" "%1";
+	<BR/> assoc .tex=textfile;
+      </LI-->
+      <LI> Register into Right Click Menu:
+	<BR/>use <A TARGET="_blank" HREF="http://www.lopesoft.com/en/filemenutools">FileMenuTools</A>;
+      </LI>
+      <LI> Create Shortcut:
+	<BR/>refer to emacs (shortcut) under %EMACS_HOME%;
+      </LI>
+    </UL>  
+
+    <H2>Keys</H2>
+    <UL>
+      <LI> Key Bindings | F1 b  | CTR+H b</LI>
+      <LI> Jump to Reference | CTR+C & </LI>
+      <LI> Key Manual | CTR+H k </LI>
+    </UL>  
+
+    <H2>Links</H2>
+    <UL>
+      <LI>
+	<A TARGET="_blank" HREF="http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Symbols">Latex Symbols</A>       
+      </LI>
+      <LI>
+	<!--A TARGET="_blank" HREF="http://devcheatsheet.com/static/pdf/auctex-ref.pdf">Auctex Shortcuts</A> <BR /-->      
+	<A TARGET="_blank" HREF="files/auctex-ref.pdf">Auctex Shortcuts</A> <BR />
+      </LI>
+      <LI>
+	<!--A TARGET="_blank" HREF="http://refcards.com/docs/gildeas/gnu-emacs/emacs-refcard-a4.pdf">Emacs Shortcut</A> <BR /-->      
+	<A TARGET="_blank" HREF="files/emacs-refcard-a4.pdf">Emacs Shortcut</A> <BR />
+      </LI>
+      <LI>
+	<A TARGET="_blank" HREF="http://www.latexbuch.de/install-latex-windows-7/#x1-60002">Das Latex-Buch</A> (Install LaTeX for Windows 7 - a complete setup)<BR />
+      </LI>
+      <LI>
+	<A TARGET="_blank" HREF="http://www.tug.org/applications/tex4ht/mn-commands.html">From Latex to HTML</A><BR />	
+      </LI>
+
+    </UL>
+
+    <H2>History</H2>
+    <OL>
+      <LI>
+	<A TARGET="_blank" HREF="emacs4ls_0_1.html">Emacs4LS 0.1</A> (Emacs for Latex Support)-(2013.04.17) <BR />
+      </LI>
+    </OL>
+
+
+  </BODY>
+</HTML>

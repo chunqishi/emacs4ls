@@ -1,0 +1,29 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed May 21 12:55:17 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("Burch-:2006" "vfill" "This sender  " "the sender describe" "the sender" "emerge" "line" "small" "back"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("../example/emacs_shortcut.tex" "d:/mesh/homepage/Emacs4LS/emacs4ls.html" "d:/mesh/thesis/latex/thesis_shi_2013.tex" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/ngc/latex/ngc2013.bib" "d:/mesh/ngc/latex/ngc2013.bbl" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/homepage/Emacs4LS/emacs4ls.html" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/ngc/latex/ngc2013.html" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/thesis/latex/thesis_shi.tex" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/icws/latex/icws2012/icws2012.tex" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/thesis/latex/chapter_agent.tex" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/thesis/latex/chapter_agent.tex" "d:/mesh/thesis/latex/chapter_evaluation.tex" "d:/mesh/thesis/latex/chapter_scenario.tex" "d:/mesh/thesis/latex/chapter_evaluation.tex" "d:/mesh/thesis/latex/chapter_agent.tex" "d:/mesh/thesis/latex/thesis_shi_2013.bbl" "d:/mesh/thesis/latex/chapter_agent.tex" "d:/mesh/thesis/latex/thesis_shi_2013.tex" "d:/mesh/ngc/latex/ngc2013.tex" "d:/mesh/thesis/latex/thesis_shi_2013.tex" "d:/mesh/thesis/latex/chapter_agent.tex" "d:/mesh/thesis/latex/chapter_evaluation.tex" "d:/mesh/thesis/latex/chapter_agent.tex"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "c:/emacs-24.3/example/emacs_shortcut.tex"
+  "emacs_shortcut.tex"
+  'latex-mode
+  '(auto-fill-mode highlight-changes-mode yas/minor-mode auto-complete-mode TeX-PDF-mode reftex-mode flyspell-mode)
+  6338
+  '(379 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (case-fold-search . t) (highlight-changes-mode . t)))
+
