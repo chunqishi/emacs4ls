@@ -65,13 +65,20 @@
 <a name="built-in-plugins" class="anchor" href="#built-in-plugins"><span class="octicon octicon-link"></span></a>Built-in Plugins</h2>
 
 <ul>
-<li>Aspell 0.50.3 (4 Spelling Check)</li>
-<li>backup-each-save 2011-08-03 (4 Backup Each Edition)</li>
-<li>Sumatra PDF 2.2.1 (4 PDF Viewer) [CTR+c CTR+v]</li>
-<li>Predictive Mode 0.23.13 (Tips for Word Completion) [CTR+x TAB]</li>
-<li>goto-last-change 1.2 (Go to Last Change) [CTR+x ,]
-## Portable</li>
-</ul><p>Register: Emacs_Register.bat; <em>Run as Administrator</em> 
+<li>
+<a href="http://aspell.net/win32/">Aspell 0.50.3</a> (4 Spelling Check)</li>
+<li>
+<a href="http://www.emacswiki.org/emacs/BackupEachSave">backup-each-save 2011-08-03</a>(4 Backup Each Edition)</li>
+<li>
+<a href="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">Sumatra PDF 2.2.1</a>(4 PDF Viewer) [CTR+c CTR+v]</li>
+<li>
+<a href="http://www.emacswiki.org/emacs/PredictiveMode">Predictive Mode 0.23.13</a>(Tips for Word Completion) [CTR+x TAB]</li>
+<li>
+<a href="http://www.emacswiki.org/emacs/goto-last-change.el">goto-last-change 1.2</a>(Go to Last Change) [CTR+x ,]</li>
+</ul><h2>
+<a name="portable" class="anchor" href="#portable"><span class="octicon octicon-link"></span></a>Portable</h2>
+
+<p>Register: Emacs_Register.bat; <em>Run as Administrator</em> 
 (move .emacs to %HOME%; add Desktop shortcut; add %PATH%;)</p>
 
 <h2>
@@ -107,57 +114,71 @@
 <li>into %TEXLIVE_HOME%, exists %TEXLIVE_HOME%/install-tl*/install-t1-advanced.bat </li>
 <li>into %EMACS_HOME%, exists %EMACS_HOME%/bin </li>
 <li>into %AUCTEX_HOME%, exists %AUCTEX_HOME%/site-lisp/auctex </li>
-<li>into %EMACS4LS_HOME%, exists %EMACS4LS_HOME%/bin
-### COPY: </li>
+<li>into %EMACS4LS_HOME%, exists %EMACS4LS_HOME%/bin</li>
+</ul><h3>
+<a name="copy" class="anchor" href="#copy"><span class="octicon octicon-link"></span></a>COPY:</h3>
+
+<ul>
 <li>from %AUCTEX_HOME%/* to %EMACS_HOME%/ --&gt; (Install Auctext into Emacs) </li>
 <li>from %EMACS4LS_HOME%/* to %EMACS_HOME%/ --&gt; (Install Emacs4LS into Emacs) </li>
-<li>from %SumatraPDF*.exe to %EMACS_HOME%/bin/SumatraPDF.exe --&gt; (Update SumatraPDF into Emacs)
-### RUN: </li>
-<li>run %TEXLIVE_HOME%/install-tl-*/install-tl-advanced.bat --&gt; (Install Texlive 2012) </li>
-<li>run %EMACS_HOME%/Emacs_Register.bat --&gt; (Register .emacs plugins)
-### PATH: </li>
-<li>add %EMACS_HOME%\bin\ into %PATH% of OS Environment </li>
-<li>add %EMACS_HOME%\aspell\bin\ into %PATH% of OS Environment
-## Tiny Tools</li>
+<li>from %SumatraPDF*.exe to %EMACS_HOME%/bin/SumatraPDF.exe --&gt; (Update SumatraPDF into Emacs)</li>
 </ul><h3>
+<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>RUN:</h3>
+
+<ul>
+<li>run %TEXLIVE_HOME%/install-tl-*/install-tl-advanced.bat --&gt; (Install Texlive 2012) </li>
+<li>run %EMACS_HOME%/Emacs_Register.bat --&gt; (Register .emacs plugins)</li>
+</ul><h3>
+<a name="path" class="anchor" href="#path"><span class="octicon octicon-link"></span></a>PATH:</h3>
+
+<ul>
+<li>add %EMACS_HOME%\bin\ into %PATH% of OS Environment </li>
+<li>add %EMACS_HOME%\aspell\bin\ into %PATH% of OS Environment</li>
+</ul><h2>
+<a name="tiny-tools" class="anchor" href="#tiny-tools"><span class="octicon octicon-link"></span></a>Tiny Tools</h2>
+
+<h3>
 <a name="emacs_mgbibbat" class="anchor" href="#emacs_mgbibbat"><span class="octicon octicon-link"></span></a>Emacs_MGBib.bat</h3>
 
 <ul>
 <li>
 <a href="https://github.com/usage" class="user-mention">@usage</a>: Emacs_MGBib.bat file1.bib file2.bib file3.bib ... </li>
 <li>
-<a href="https://github.com/description" class="user-mention">@description</a>: merge bible files
-### Emacs_PDF2PS.bat </li>
+<a href="https://github.com/description" class="user-mention">@description</a>: merge bible files</li>
+</ul><h3>
+<a name="emacs_pdf2psbat" class="anchor" href="#emacs_pdf2psbat"><span class="octicon octicon-link"></span></a>Emacs_PDF2PS.bat</h3>
+
+<ul>
 <li>
 <a href="https://github.com/usage" class="user-mention">@usage</a>: Emacs_PDF2PS.bat file1.pdf file2.pdf file3.pdf ... </li>
 <li>
-<p><a href="https://github.com/description" class="user-mention">@description</a>: convert pdf to eps (figures)</p>
-
-<h2>
+<a href="https://github.com/description" class="user-mention">@description</a>: convert pdf to eps (figures)</li>
+</ul><h2>
 <a name="more" class="anchor" href="#more"><span class="octicon octicon-link"></span></a>More</h2>
-</li>
-<li><p>Register into Right Click Menu:  use FileMenuTools;</p></li>
-<li>
-<p>Create Shortcut:  refer to emacs (shortcut) under %EMACS_HOME%;</p>
 
-<h2>
+<ul>
+<li>Register into Right Click Menu:  use <a href="http://www.lopesoft.com/en/filemenutools">FileMenuTools</a>;</li>
+<li>Create Shortcut:  refer to emacs (shortcut) under %EMACS_HOME%;</li>
+</ul><h2>
 <a name="keys" class="anchor" href="#keys"><span class="octicon octicon-link"></span></a>Keys</h2>
-</li>
-<li><p>Key Bindings | F1 b | CTR+H b</p></li>
+
+<ul>
+<li>Key Bindings | F1 b | CTR+H b</li>
 <li>Jump to Reference | CTR+C &amp;</li>
 <li>Key Manual | CTR+H k</li>
-<li>
-<p>Predict Model | CTR+X tab</p>
-
-<h2>
+<li>Predict Model | CTR+X tab</li>
+</ul><h2>
 <a name="links" class="anchor" href="#links"><span class="octicon octicon-link"></span></a>Links</h2>
-</li>
-<li><p>Latex Symbols</p></li>
-<li>Auctex Shortcuts </li>
-<li>Emacs Shortcut </li>
-<li>Das Latex-Buch (Install LaTeX for Windows 7 - a complete setup)</li>
-<li>From Latex to HTML</li>
-<li>BibTeX and bibliography styles (examples)</li>
+
+<ul>
+<li><a href="http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Symbols">Latex Symbols</a></li>
+<li><a href="http://www.ai.soc.i.kyoto-u.ac.jp/%7Eshi/latex/files/auctex-ref.pdf">Auctex Shortcuts</a></li>
+<li><a href="http://www.ai.soc.i.kyoto-u.ac.jp/%7Eshi/latex/files/emacs-refcard-a4.pdf">Emacs Shortcut </a></li>
+<li>
+<a href="http://www.latexbuch.de/install-latex-windows-7/#x1-60002">Das Latex-Buch</a> (Install LaTeX for Windows 7 - a complete setup)</li>
+<li><a href="http://www.tug.org/applications/tex4ht/mn-commands.html">From Latex to HTML</a></li>
+<li>
+<a href="http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html">BibTeX and bibliography styles</a> (<a href="http://www.ai.soc.i.kyoto-u.ac.jp/%7Eshi/latex/files/bibstyles.pdf">examples</a>)</li>
 </ul>
       </section>
     </div>
