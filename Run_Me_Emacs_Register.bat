@@ -115,6 +115,8 @@ REM echo.
 REM @COMMENT: create desktop shortcut
 %BAT_HOME%bin\XXMKLINK.EXE %USERPROFILE%\Desktop\Emacs4LS %BAT_HOME%bin\Emacs.bat "" %BAT_HOME%bin Emacs 3 %BAT_HOME%\bin\emacs.ico
 
+%BAT_HOME%bin\XXMKLINK.EXE %USERPROFILE%\Desktop\BRISS_PDFCrop %BAT_HOME%briss-0.9\briss-0.9.exe "" %BAT_HOME%briss-0.9 BRISS 3 %BAT_HOME%briss-0.9\briss.ico
+
 set REG_FILE=register_texfile.REG
 echo Windows Registry Editor Version 5.00 > %REG_FILE%
 echo ;>> %REG_FILE%
