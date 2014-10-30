@@ -2,13 +2,12 @@
 LanguageID=$0C0A
 Language=Spanish (Spain - Modern Sort)
 Product=FileMenu Tools
-Version=6.4
-LastUpdated=Jan 07, 2013
-Author=Rubén López Hernández
+Version=6.6
+LastUpdated=Jun 21, 2013
+Author=LopeSoft
 Contact=ruben@lopesoft.com
 Website=http://www.lopesoft.com
 HelpFile=FileMenuTools_esp.chm
-Revision=1
 
 [MENU]
 PID32816=&Archivo
@@ -32,8 +31,6 @@ ID32821=Panel de tareas
 PID32831=&Opciones
 ID32831=Habilitar FileMenu Tools
 ID32832=
-PID32829=Idioma
-ID32829=Lista de idiomas
 PID32824=Ay&uda
 ID32824=&Contenido...
 ID57664=&Acerca de...
@@ -189,6 +186,7 @@ ID32924=Ruta de la carpeta sin la letra de unidad
 ID32927=Nombre de la carpeta
 ID32925=Ruta de la carpeta sin la letra de unidad
 ID32928=Nombre de la carpeta
+ID32940=Idioma...
 
 [DLG_100]
 CAPTION=Acerca de...
@@ -218,6 +216,17 @@ CAPTION=Comprobación de actualización
 ID1=Cancelar
 ID1008=Novedades
 ID1009=Actualizar
+
+[DLG_233]
+CAPTION=Idiomas
+ID1015=&Descargar idiomas...
+ID1016=Comprobar &actualización
+
+[DLG_234]
+CAPTION=Descargar idiomas
+ID1=&Descargar
+ID2=&Cancelar
+ID1019=Seleccione los idiomas que desee descargar desde la siguiente lista:
 
 [STRINGTABLE]
 ID128=FileMenu Tools
@@ -616,15 +625,6 @@ ID62179=Mixto
 ID9503=Arrastra una columna aquí para agrupar por esa columna
 ID9504=No hay elementos para mostrar
 ID9505=(no hay campos disponibles)
-ID61184=Cambiar el tamaño de la ventana
-ID61185=Cambiar la posición de la ventana
-ID61186=Reducir la ventana a un icono
-ID61187=Aumentar la ventana al tamaño máximo
-ID61188=Cambiar a la ventana siguiente del documento
-ID61189=Cambiar a la ventana anterior del documento
-ID61190=Cerrar la ventana activa y preguntar si desea guardar los documentos
-ID61202=Restaurar la ventana a su tamaño normal
-ID61203=Activar la Lista de tareas
 ID57632=Borrar la selección\nBorrar
 ID57633=Borrar todo\nBorrar todo
 ID57634=Copiar la selección y la coloca en el Portapapeles\nCopiar
@@ -752,3 +752,16 @@ ID81=Archivos y carpetas;Sólo archivos;Sólo carpetas
 ID82=Preguntar;No renombrar;Sobreescribir;Añadir secuencia
 ID230=Acción|Acción a realizar cuando se ejecute el comando: ejecutar aplicación, copiar a una carpeta, mover a una carpeta, eliminar determinados archivos, renombrar archivos o enviar los archivos por e-mail.
 ID231=Ejecutar programa;Copiar a una carpeta;Mover a una carpeta;Eliminar determinados archivos;Enviar por e-mail;Renombrar archivos
+ID232=Indique los tipos de archivos (vacío para todos los archivos). Separe los tipos de archivos con un punto y coma. Ejemplo: *.txt;*.ini
+ID150=Solicitar confirmación|Muestra un mensaje de confirmación antes de iniciar el proceso de renombrado. Si "Mostrar vista previa" es "Sí", entonces este valor es ignorado.
+ID83=Nombre
+ID84=Versión
+ID85=Autor
+ID86=Fecha
+ID88=Una nueva versión existe para el idioma actual. ¿Desea actualizarlo ahora?
+ID89=El idioma actual está actualizado
+ID90=Un error ocurrió al intentar descargar la lista de idiomas
+ID91=Crea una copia del elemento seleccionado\nCopiar
+ID92=Acceso denegado. Si UAC (Control de cuentas de usuario) está activado, es necesesario ejecutar FileMenu Tools como administrador para poder realizar esta acción.\n\nDesea ejecutar ahora FileMenu Tools como administrador?
+ID236=Mostrar barra de progreso|Mostrar barra de progreso si "Múltiples instancias" es Secuencial
+
