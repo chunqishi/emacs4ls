@@ -1,19 +1,23 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <meta charset="utf-8" />
-<HTML xmlns="http://www.w3.org/1999/xhmlt">
-  <HEAD>
-    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <META http-equiv="author" content="Chunqi Shi (chunqi.shi@hotmail.com)" />
 
-    <TITLE> Chunqi Shi -- Emacs 4 Latex Support</TITLE>    
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Emacs4ls : Emacs 4 Latex Support (Windows)" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Chunqi Shi -- Emacs 4 Latex Support</title>
+    
+    
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" >  </script> 
  <style>      
         body, p, th, td, pre {
             font-size: 14pt; }
         
         body {  
+            margin:2px;
             background-color:lightyellow; 
             counter-reset: section subsection figure;}
         
@@ -38,7 +42,7 @@
             content:"Fig. " counter(section) "." counter(figure) " - ";}
         
         .reset {
-            counter-reset:subsection figure;}
+            counter-reset:section subsection figure;}
         
         .nav-bar{
             list-style-type:none;
@@ -172,7 +176,7 @@
             display: inline-block;
             width: 200px;
             height: 100px;
-            margin: 8px;
+            margin: 2px;
                 border-style:solid;
             border-width: 1.5px;
             position: relative;
@@ -183,14 +187,37 @@
             left: 0;
             right: 0;
             text-align:left;
-            padding: 1px 2px 2px 1px;
+            padding: 1px 1px 2px 1px;
             position: absolute;
             font-weight:bold;
             line-height: 1em;  }
+        div.box p {
+            margin: 20px 0px 15px;}
         </style> 
-  </HEAD>
-  <BODY>
-  
+        
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chunqishi/emacs4ls">View on GitHub</a>
+
+          <h1 id="project_title">Emacs4ls</h1>
+          <p id="project_tagline">Emacs 4 Latex Support (Windows)</p>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chunqishi/emacs4ls/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chunqishi/emacs4ls/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    
+    
+    
     <a name="_top_" />
     <nav class="nav-bar">
         <a href="#install">install</a>
@@ -201,9 +228,9 @@
     
     
     <p class="author">
- Version <var>24.5/0.0.1</var>, <ruby>史春奇<rt> Chunqi Shi</rt><>(chunqi.shi@hotmail.com)</ruby>,  April. 2015</p>  
+ Version <var>24.5/0.0.1</var>, <ruby>史春奇<rt> Chunqi Shi</rt>(chunqi.shi@hotmail.com)</ruby>,  April. 2015</p>  
  
-    <H2>About</H2>
+    <H2 class="reset">About</H2>
     <UL>
       <LI>This tool prepares a Emacs environment for LATEX compile under Windows
       environment.</LI>
@@ -318,5 +345,15 @@
 
     </UL>
 
-  </BODY>
-</HTML>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Emacs4ls maintained by <a href="https://github.com/chunqishi">chunqishi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
