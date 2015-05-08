@@ -1,116 +1,302 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE HTML>
+<html>
+    <meta charset="utf-8" />
 <HTML xmlns="http://www.w3.org/1999/xhmlt">
   <HEAD>
     <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <META http-equiv="author" content="Chunqi Shi (chunqi.shi@hotmail.com)" />
 
-    <TITLE> Chunqi Shi -- Emacs 4 Latex Support</TITLE>     
+    <TITLE> Chunqi Shi -- Emacs 4 Latex Support</TITLE>    
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" >  </script> 
+ <style>      
+        body, p, th, td, pre {
+            font-size: 14pt; }
+        
+        body {  
+            background-color:lightyellow; 
+            counter-reset: section subsection figure;}
+        
+        h1 {
+            text-align:center }
+        
+        h2 {
+            counter-increment: section; }    
+        h3 {
+            counter-increment: subsection; }
+        
+        h4 {
+            counter-increment: figure; }
+        
+        h2:before {
+            content:counter(section) ". "; }
+        
+        h3:before {
+            content:counter(section) "." counter(subsection) " "; }
+        
+        h4:before{
+            content:"Fig. " counter(section) "." counter(figure) " - ";}
+        
+        .reset {
+            counter-reset:subsection figure;}
+        
+        .nav-bar{
+            list-style-type:none;
+            margin:0;
+            padding:0; }
+        
+        img {
+            margin-left: 10pt;
+            border: thin solid gray; }
+        
+        .sample { 
+            background-color: black;
+            font-size: 12pt;
+            color:white;
+            padding: 4pt;
+            margin-left: 10pt;
+            margin-right: 30pt; 
+            display: block;
+            white-space: pre-line;}
+        
+        .code { 
+            padding: 4pt;
+            font-size: 12pt;
+            background-color: whitesmoke;
+            border: thin dotted gray;
+            margin-left: 10pt;
+            margin-right: 30pt; 
+            display: block; 
+            white-space: pre-line;}
+        
+        .author {
+            font-size: 16pt; 
+            text-align:center;}
+        /*  grid tables  */
+        table.g {
+            margin: 8px;
+            border-width: 1px;
+            border-color: gray;
+            border-collapse: collapse; }
+        table.g th {
+            border-width: 1px;
+            padding: 8px 8px 8px 8px;
+            border-style: solid;
+            border-color: gray;
+            background-color: lightyellow; }
+        table.g td {
+            text-align:center;
+            border-width: 1px;
+            padding: 8px 8px 8px 8px;
+            border-style:solid;
+            border-color: gray;
+            background-color: #ffffff; }
+        /*  vertical tables  */
+        table.v {
+            margin: 8px;
+            border-collapse: collapse; }
+        table.v thead {
+            border-right: 10px solid;
+            border-left: 10px solid;
+            background: #fc9;
+            border-color: #fc9;}
+        table.v th {
+            padding: 4px 20px 4px 20px;
+            border: 1px #fff solid; }
+        table.v tbody{
+            text-align:left;
+            border-right: 10px solid;
+            border-left: 10px solid;
+            border-color: #adf;
+            background: #adf;
+            vertical-align: top; }
+        table.v td {
+            padding:  4px 20px 4px 20px;
+            border: 1px #fff solid; }
+        /*  horizontal tables  */
+        table.h {
+            margin: 8px;
+            border-collapse:collapse; }
+        table.h th {
+            padding:  4px 40px 4px 40px;
+            border:1px solid #98bf21;
+            background-color:#A7C942;
+            color:#fff; }
+        table.h td {
+            text-align:center;
+            border:1px solid #98bf21;
+            padding: 4px 40px 4px 40px; }
+        table.h tr.alt td {
+            color:#000;
+            background-color:#EAF2D3; }
+        /**
+            http://learnlayout.com/inline-block.html
+            http://www.w3schools.com/cssref/css_colornames.asp
+        **/
+        div.link {
+            display: inline-block;
+            width: 80px;
+            height: 100px;
+            position: relative;
+            text-align:center;
+            vertical-align: middle; }
+        div.black {
+            border-color: Black ;
+            border-width: 2px; }
+        div.black span.h {
+            background-color: Black       ;
+            color: Snow ;  }
+        div.white {
+            border-color: Lavender  ;
+            border-width: 2px; }
+        div.white span.h {
+            background-color: Snow       ;
+            color: Black ; }
+        div.red {  border-color: HotPink }
+        div.red span.h {
+            background-color: HotPink;
+            color: LightCyan;         }
+        div.yellow { border-color: GoldenRod  }
+        div.yellow span.h {
+            background-color: GoldenRod    ;
+            color: Azure ;         }
+        div.blue { border-color: DodgerBlue }
+        div.blue span.h {
+            background-color: DodgerBlue     ;
+            color: Snow ;  }
+        div.green { border-color: ForestGreen }
+        div.green span.h {
+            background-color: MediumSeaGreen    ;
+            color: Ivory   ; }
+        div.box {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            margin: 8px;
+                border-style:solid;
+            border-width: 1.5px;
+            position: relative;
+            text-align:center;
+            vertical-align: middle;  }
+        div.box span.h {
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align:left;
+            padding: 1px 2px 2px 1px;
+            position: absolute;
+            font-weight:bold;
+            line-height: 1em;  }
+        </style> 
   </HEAD>
   <BODY>
-    <H1>Emacs 4 Latex Support (Windows)</H1>
-    <P>Chunqi Shi (chunqi.shi@hotmail.com)</P>
-    <H2>Update</H2>
-    <UL>
-      <LI> 2013-04-23 </LI>
-    </UL>  
-
-    <H2>Version</H2>
-    <UL>
-      <LI> 0.2 </LI>
-      <LI> Tested under Window 7 Home Premium. </LI>
-    </UL>  
-
+  
+    <a name="_top_" />
+    <nav class="nav-bar">
+        <a href="#install">install</a>
+        | 
+        <a href="https://github.com/chunqishi/emacs4ls/issues" target="_blank">issues</a></nav>
+        
+    <H1>Emacs 4 Latex Support Under Windows(Emacs4LS)</H1>
+    
+    
+    <p class="author">
+ Version <var>24.5/0.0.1</var>, <ruby>史春奇<rt> Chunqi Shi</rt><>(chunqi.shi@hotmail.com)</ruby>,  April. 2015</p>  
+ 
     <H2>About</H2>
     <UL>
-      <LI>Configure a Emacs editor for latex compile in Windows
+      <LI>This tool prepares a Emacs environment for LATEX compile under Windows
       environment.</LI>
-      <LI>An easy installation of Emacs as latex editor for
-      newbie.</LI>
+      <LI>Easy installation for newbie.</LI>
     </UL> 
 
     <H2>Change Log</H2>
+
+    
+    <a name="install" />
+    <H2>Install</H2>
+    <H3>TexLive</H3>
+    <div class="green box"><span class="h">Download</span><p>EXE for Windows (12mb)</p><p><a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe">install-tl-windows.exe</a></p></div>
+    <div class="link"><span class="h">Run ...</span><p>====&gt;</p></div>
+    <div class="blue box"><span class="h">Tips</span><p>Time </p><p>about 1 hour</p></div>
+    
+    <H3>Emacs4LS</H3>
+    
+    <div class="green box"><span class="h">Install GIT</span><p>GIT for Windows (12mb)</p><p><a href="https://msysgit.github.io/">V 1.9.5</a></p></div>
+    <div class="link"><span class="h"> next </span><p>====&gt;</p></div>
+    <div class="green box" style="width:580px" ><span class="h">Git Clone</span><p>Command </p><samp class="sample">git clone https://github.com/chunqishi/emacs4ls.git</samp></div>
+    <br />
+    <div class="link"><span class="h"> next </span><p>====&gt;</p></div>
+    <div class="green box" style="width:270px"><span class="h">Register</span><p>Right click and run "<b>Run_Me_Emacs_Register.bat</b>" as Administrator</p> </div>
+    
+    <p> OR </p>
+    <div class="green box"><span class="h">Without GIT</span><p>Download</p><p><a href="https://github.com/chunqishi/emacs4ls/zipball/master">.zip</a></p></div>
+    <div class="link"><span class="h"> next </span><p>====&gt;</p></div>
+    <div class="green box"  ><span class="h">Unzip</span><p>Command </p><samp class="sample">unzip *.zip</samp></div>
+    <div class="link"><span class="h"> next </span><p>====&gt;</p></div>
+    <div class="green box" style="width:270px"><span class="h">Register</span><p>Right click and run "<b>Run_Me_Emacs_Register.bat</b>" as Administrator</p> </div>
+    
+    <H3>Upgrade Emacs or AucTex</H3>
+    
+    
+    <div class="green box"><span class="h">Download</span><p>.zip files</p><p><a href="http://ftp.gnu.org/gnu/emacs/windows/emacs-24.5-bin-i686-mingw32.zip">EMACS</a> and <a href="http://ftp.gnu.org/pub/gnu/auctex/auctex-11.88-e24.4-msw.zip">AucTex</a></p></div>
+    <div class="link"><span class="h"> unzip </span><p>====&gt;</p></div>
+    <div class="green box" style="width:260px"><span class="h">Replace</span><p>Copy everything from %EMACS% and  %AUCTEX% into %EMACS4LS%</p></div>
+    
+    
+    <H2>Plugins</H2>
+    
+    <table class="v">
+    <tr><th>Name</th><th>Version</th><th>Shortcut</th><th>About</th></tr>
+    <tr><td>Sumatra PDF</td><td><A TARGET="_blank" HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">3.0</A> </td><td>[CTL+c CTL+v]</td><td>PDF viewer</td></tr>
+    <tr><td>Aspell</td><td><A TARGET="_blank" HREF="http://aspell.net/win32/">0.50.3</A> </td><td></td><td>spelling check</td></tr>
+    <tr><td>backup-each-save [Emacs]</td><td><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/BackupEachSave">2011-08-03</A> </td><td></td><td>save each change into .backup/*</td></tr>
+    <tr><td>AspellPredictive Mode[Emacs]</td><td><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/PredictiveMode">0.23.13</A> </td><td>[CTL+x TAB]</td><td>Tips for Word Completion</td></tr>   
+    <tr><td>goto-last-change[Emacs]</td><td><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/goto-last-change.el">1.2</A> </td><td>[CTL+x ,]</td><td>Go to last change</td></tr>   
+    </table>
+
+    <H2>Softwares</H2>
+    
+    
+    <table class="v">
+    <tr><th>Name</th><th>Version</th><th>Necessary</th></tr>
+    <tr><td>TexLive</td><td><A TARGET="_blank" HREF="http://www.tug.org/texlive/acquire-netinstall.html">2014</A> </td><td>MUST</td></tr>   
+    <tr><td>Emacs</td><td><A TARGET="_blank" HREF="http://ftp.gnu.org/gnu/emacs/windows/">24.5</A> </td><td>MUST</td></tr>   
+    <tr><td>Auctex</td><td><A TARGET="_blank" HREF="http://www.gnu.org/software/auctex/download-for-windows.html">11.88</A> </td><td>MUST</td></tr>     
+    <tr><td>Sumatra PDF</td><td><A TARGET="_blank" HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">3.0</A> </td><td>MUST</td></tr>  
+    <tr><td>Emacs4LS</td><td><A TARGET="_blank" HREF="http://chunqishi.github.io/emacs4ls/">24.5/0.0.1</A> </td><td>MUST</td></tr>  
+    </table>
+    
+
+    <H2>More</H2>
+    <table class="h">
+        <tr> <th>Name</th> <th>Version</th> <th>About</th></tr>
+        <tr> <td>FileMenuTools</td><td><A TARGET="_blank" HREF="http://www.lopesoft.com/en/filemenutools">6.7.1</A></td><td>Register into right click menu.</td></tr>
+        <tr> <td>Shortcut Refer</td><td></td><td>refer to emacs (shortcut) under %EMACS_HOME%;</td></tr>
+    </table>
+
+    <H2>Shortcuts</H2>
+    <table class="h"> 
+    <tr><th>Function</th><th>Keys</th><th></th></tr>
+    <tr><td>Key Bindings</td><td>[F1 b] / [CTR+H b]</td><td></td></tr>
+    <tr><td>Jump to Reference</td><td>[CTR+C &amp;]</td><td></td></tr>
+    <tr><td>Key Manual</td><td>[CTR+H k]</td><td></td></tr>
+    <tr><td>Predict Model</td><td>[CTR+X TAB]</td><td></td></tr>
+    </table>
+
+    <H2>History</H2>
     <UL>
-      <LI>Add: plugin goto-last-change.</LI>
-      <LI>Add: plugin Predictive Model.</LI>
-      <LI>Fix: Sumatra PDF double click to open Emacs, even closed.</LI>
-      <LI>Fix: Default %HOME% by %APPDATA%, no %USERPROFILE%.</LI>
-      <LI>Fix: Delete old link to mklink to new .emacs.</LI>
+      <LI>V 24.5/<a href="http://chunqishi.github.io/emacs4ls/" target="_blank">0.0.1</a> [2015-04-23]:</LI>
+      <LI>V 24.3/<a target="_blank" href="http://www.ai.soc.i.kyoto-u.ac.jp/~shi/latex/emacs4ls.html">0.0.2</a> [2013-04-23]:</LI>
+        <OL>
+            <LI> Emacs: [spell-check, back-up, last-change, word-completion, error-location]</LI>
+            <LI> Tools: [pdf-crop, bibtext-merge, bat-install]</LI>
+        </OL>
+      <LI>V 24.3/<a target="_blank" href="http://www.ai.soc.i.kyoto-u.ac.jp/~shi/latex/emacs4ls_0_1.html">0.0.1</a> [2013-04-17].</LI>
     </UL> 
 
 
-    <H2>Built-in Plugins</H2>
-    <UL>
-      <LI><A TARGET="_blank" HREF="http://aspell.net/win32/">Aspell 0.50.3</A> (4 Spelling Check)</LI>
-      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/BackupEachSave">backup-each-save 2011-08-03</A> (4 Backup Each Edition)</LI>
-      <LI><A TARGET="_blank" HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html">Sumatra PDF 2.2.1</A> (4 PDF Viewer) [CTL+c CTL+v]</LI>
-      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/PredictiveMode">Predictive Mode 0.23.13</A> (Tips for Word Completion) [CTL+x TAB]</LI>
-      <LI><A TARGET="_blank" HREF="http://www.emacswiki.org/emacs/goto-last-change.el">goto-last-change 1.2</A> (Go to Last Change) [CTL+x ,]</LI>
-    </UL>  
-
-    <H2>Download</H2>
-    <UL>
-      <LI>TexLive 2012:
-	<BR/><A HREF="http://www.tug.org/texlive/acquire-netinstall.html" TARGET="_blank">http://www.tug.org/texlive/acquire-netinstall.html</A></LI>
-      
-      <LI>Emacs 24.3:
-	<BR/><A HREF="http://ftp.gnu.org/gnu/emacs/windows/" TARGET="_blank">http://ftp.gnu.org/gnu/emacs/windows/</A></LI>
-      <LI>Auctex 11.87:
-	<BR/><A HREF="http://www.gnu.org/software/auctex/download-for-windows.html" TARGET="_blank">http://www.gnu.org/software/auctex/download-for-windows.html</A></LI>
-      <LI>SumatraPDF 2.2.1:
-	<BR/><A HREF="http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html" TARGET="_blank">http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html</A></LI>      
-      <LI>Emacs4LS 0.2 (Emacs for Latex Support)-(2013.04.23)
-	<BR/><A HREF="http://www.ai.soc.i.kyoto-u.ac.jp/~shi/files/Emacs4LS_0.2.zip" TARGET="_blank">Emacs4LS_0.2.zip</A></LI>
-      <!--LI>Emacs_SumatraPDF.bat
-	<BR/><A HREF="files/Emacs_SumatraPDF.bat" TARGET="_blank">Emacs_SumatraPDF.bat</A></LI-->
-      <!--LI>Aspell 0.60.3 (2005):
-	<BR/><A HREF="http://www.nosq.com/download/Aspell-win32-0.60.3-en-US.zip" TARGET="_blank">http://www.nosq.com/download/Aspell-win32-0.60.3-en-US.zip</A></LI-->      
-    </UL>
-
-    <H2>Install</H2>
-    <OL>
-      <LI> UNZIP:
-	<BR/> into %TEXLIVE_HOME%, exists %TEXLIVE_HOME%/install-tl*/install-t1-advanced.bat
-	<BR/> into %EMACS_HOME%, exists %EMACS_HOME%/bin
-	<BR/> into %AUCTEX_HOME%, exists %AUCTEX_HOME%/site-lisp/auctex
-	<BR/> into %EMACS4LS_HOME%, exists %EMACS4LS_HOME%/bin </LI>
-      <LI> COPY:
-	<BR/> from %AUCTEX_HOME%/* to %EMACS_HOME%/    --> (Install Auctext into Emacs)
-	<BR/> from %EMACS4LS_HOME%/* to %EMACS_HOME%/  -->  (Install Emacs4LS into Emacs)
-	<BR/> from %SumatraPDF*.exe to %EMACS_HOME%/bin/SumatraPDF.exe -->  (Update SumatraPDF into Emacs) </LI>
-      <LI> RUN:
-
-	<BR/> run %TEXLIVE_HOME%/install-tl-*/install-tl-advanced.bat --> (Install Texlive 2012)
-	<BR/> run %EMACS_HOME%/Emacs_Register.bat  -->  (Register .emacs plugins)</LI>
-      <LI> PATH:
-	<BR/>add %EMACS_HOME%\bin\  into %PATH% of OS Environment
-	<BR/>add %EMACS_HOME%\aspell\bin\  into %PATH% of OS Environment
-      </LI>
-    </OL>  
-
-    <H2>More</H2>
-    <UL>
-      <!--LI> Register:
-	<BR/> ftype texfile="runemacs" "%1";
-	<BR/> assoc .tex=textfile;
-      </LI-->
-      <LI> Register into Right Click Menu:
-	<BR/>use <A TARGET="_blank" HREF="http://www.lopesoft.com/en/filemenutools">FileMenuTools</A>;
-      </LI>
-      <LI> Create Shortcut:
-	<BR/>refer to emacs (shortcut) under %EMACS_HOME%;
-      </LI>
-    </UL>  
-
-    <H2>Keys</H2>
-    <UL>
-      <LI> Key Bindings | F1 b  | CTR+H b</LI>
-      <LI> Jump to Reference | CTR+C & </LI>
-      <LI> Key Manual | CTR+H k </LI>
-    </UL>  
-
-    <H2>Links</H2>
+    <H2>More Links</H2>
     <UL>
       <LI>
 	<A TARGET="_blank" HREF="http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Symbols">Latex Symbols</A>       
@@ -131,14 +317,6 @@
       </LI>
 
     </UL>
-
-    <H2>History</H2>
-    <OL>
-      <LI>
-	<A TARGET="_blank" HREF="emacs4ls_0_1.html">Emacs4LS 0.1</A> (Emacs for Latex Support)-(2013.04.17) <BR />
-      </LI>
-    </OL>
-
 
   </BODY>
 </HTML>
