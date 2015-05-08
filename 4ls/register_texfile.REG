@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00 
+;
+;[HKEY_CURRENT_USER\Software\GNU\Emacs\HOME] 
+;@="C:\\portable\\emacs4ls\\" 
+[HKEY_CURRENT_USER\Software\Classes\texfile] 
+[HKEY_CURRENT_USER\Software\Classes\texfile\Shell] 
+[HKEY_CURRENT_USER\Software\Classes\texfile\Shell\Open] 
+[HKEY_CURRENT_USER\Software\Classes\texfile\Shell\Open\Command] 
+@="C:\\portable\\emacs4ls\\bin\\emacsclientw.exe -n -a \"C:\\portable\\emacs4ls\\bin\\runemacs.exe\" \"%~1\" %*" 
+[HKEY_CURRENT_USER\Software\Classes\.tex] 
+@="texfile" 
+[HKEY_CURRENT_USER\Software\Classes\.bib] 
+@="texfile" 
+[HKEY_CURRENT_USER\Software\Classes\.lco] 
+@="texfile" 
+[HKEY_CURRENT_USER\Software\Classes\.sty] 
+@="texfile" 
+[HKEY_CURRENT_USER\Software\Classes\.cls] 
+@="texfile" 
