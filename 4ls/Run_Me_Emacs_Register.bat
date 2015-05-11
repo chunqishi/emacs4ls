@@ -65,16 +65,16 @@ echo Manual Task:
 echo ........................................
 echo Please Add Aspell And Emacs To %% PATH %%;
 echo. 
-echo Aspell:  %BAT_HOME%aspell\bin 
+echo Aspell:  %BAT_HOME%tools\aspell\bin 
 echo Emacs:   %BAT_HOME%bin 
 echo. 
-echo Append   ";%BAT_HOME%aspell\bin;%BAT_HOME%bin;"  
+echo Append   ";%BAT_HOME%tools\aspell\bin;%BAT_HOME%bin;"  
 echo To PATH Environment!
-echo ;%BAT_HOME%aspell\bin;%BAT_HOME%bin;|clip
+echo ;%BAT_HOME%tools\aspell\bin;%BAT_HOME%bin;|clip
 echo ........................................
 echo.  
 
-set PATH_APPEND=;%BAT_HOME%aspell\bin;%BAT_HOME%bin;
+set PATH_APPEND=;%BAT_HOME%tools\aspell\bin;%BAT_HOME%bin;
 
 REM echo check whether in the paths
 echo %PATH% | findstr /C:%PATH_APPEND%>nul && (
@@ -104,7 +104,7 @@ echo ........................................
 echo %PATH%
 echo ........................................
 echo.  
-echo Please Check And Make Sure You Added: "%BAT_HOME%aspell\bin; %BAT_HOME%bin;"
+echo Please Check And Make Sure You Added: "%BAT_HOME%tools\aspell\bin; %BAT_HOME%bin;"
 echo. 
 
 REM echo Register .tex Associated With Emacs.
@@ -115,7 +115,7 @@ REM echo.
 REM @COMMENT: create desktop shortcut
 %BAT_HOME%bin\XXMKLINK.EXE %USERPROFILE%\Desktop\Emacs4LS %BAT_HOME%bin\Emacs.bat "" %BAT_HOME%bin Emacs 3 %BAT_HOME%\bin\emacs.ico
 
-%BAT_HOME%bin\XXMKLINK.EXE %USERPROFILE%\Desktop\BRISS_PDFCrop %BAT_HOME%briss-0.9\briss-0.9.exe "" %BAT_HOME%briss-0.9 BRISS 3 %BAT_HOME%briss-0.9\briss.ico
+%BAT_HOME%bin\XXMKLINK.EXE %USERPROFILE%\Desktop\BRISS_PDFCrop %BAT_HOME%tools\briss-0.9\briss-0.9.exe "" %BAT_HOME%tools\briss-0.9 BRISS 3 %BAT_HOME%tools\briss-0.9\briss.ico
 
 set REG_FILE=register_texfile.REG
 echo Windows Registry Editor Version 5.00 > %REG_FILE%
@@ -141,8 +141,10 @@ echo @="texfile" >> %REG_FILE%
 echo.
 
 echo If you want to register associate file "texfile", 
-echo Please run (Double Click) texfile.REG.
-
+echo Please run (Double Click) register_texfile.REG.
+REGEDIT.EXE  /S  "%REG_FILE%"
+ 
+ 
 echo End!
 
 echo.

@@ -37,8 +37,6 @@ set LS_HOME=%BAT_HOME%4ls
 set AUCTEX_HOME=%BAT_HOME%auctex-11.88
 set EMACS_HOME=%BAT_HOME%emacs-24.5
 
-
-robocopy %LS_HOME%\tools %BAT_HOME% /COPYALL /E
 robocopy %LS_HOME% %BAT_HOME% /COPYALL /E
 robocopy %AUCTEX_HOME% %BAT_HOME% /COPYALL /E
 robocopy %EMACS_HOME% %BAT_HOME% /COPYALL /E
