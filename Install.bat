@@ -36,11 +36,13 @@ set BAT_HOME=%~dp0
 set LS_HOME=%BAT_HOME%4ls
 set AUCTEX_HOME=%BAT_HOME%auctex-11.88
 set EMACS_HOME=%BAT_HOME%emacs-24.5
+set VERION_HOME=%BAT_HOME%emacs4ls-24.5-0.0.1
 
-robocopy %LS_HOME% %BAT_HOME% /COPYALL /E
-robocopy %AUCTEX_HOME% %BAT_HOME% /COPYALL /E
-robocopy %EMACS_HOME% %BAT_HOME% /COPYALL /E
-call  Run_Me_Emacs_Register.bat
+IF not exist %VERION_HOME% (mkdir %VERION_HOME%)
+robocopy %LS_HOME% %VERION_HOME% /COPYALL /E
+robocopy %AUCTEX_HOME% %VERION_HOME% /COPYALL /E
+robocopy %EMACS_HOME% %VERION_HOME% /COPYALL /E
+call  %VERION_HOME%\Run_Me_Emacs_Register.bat
 
 pause > nul
 
