@@ -141,8 +141,8 @@ echo @="texfile" >> %REG_FILE%
 echo.
 
 echo If you want to register associate file "texfile", 
-echo Please run (Double Click) register_texfile.REG.
-REGEDIT.EXE  /S  "%REG_FILE%"
+echo Please run (Double Click) "register_texfile.REG".
+REM REGEDIT.EXE  /S  "%REG_FILE%"
  
  
 echo End!
