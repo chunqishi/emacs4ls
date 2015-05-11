@@ -2,7 +2,7 @@
 ;; -*- coding: utf-8 -*-
 ;
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+; (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs4ls"))
 
 (require 'shi-unicad)
 (require 'shi-auto-install)
