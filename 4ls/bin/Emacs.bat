@@ -22,7 +22,11 @@ REM "%RUN_EMACS_WIN32%"
 REM )
 
 REM if not "%~1"=="" "%EMACS_CLIENT_WIN32%" -na "%RUN_EMACS_WIN32%" "%~1"
+set filename=%~1
 
+if "%~1"=="" (
+    set filename=%HOMEPATH%\Desktop
+)
 
-"%~dp0emacsclientw.exe" -na "%~dp0runemacs.exe" "%~1"
+"%~dp0emacsclientw.exe" -na "%~dp0runemacs.exe" "%filename%"
 REM echo "%~dp0emacsclientw.exe" -na "%~dp0runemacs.exe" "%~1" > Emacs.bat.log
