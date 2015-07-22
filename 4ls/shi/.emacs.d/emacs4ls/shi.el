@@ -68,7 +68,7 @@
         ;; according to online this will course copy error.
         (set-keyboard-coding-system 'utf-8)
         (set-terminal-coding-system 'utf-8)
-        (unless (eq system-type 'windows-nt)
+        ;; (unless (eq system-type 'windows-nt)
         ;; (set-selection-coding-system 'utf-8))
         (prefer-coding-system 'utf-8)
         (set-clipboard-coding-system 'utf-8)
