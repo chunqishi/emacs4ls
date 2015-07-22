@@ -23,6 +23,14 @@
 ;(require 'shi-nxhtml)
 
 
+
+
+
+
+;;(setq-default save-place t)
+(desktop-save-mode 1)
+
+
 ;;;  http://stackoverflow.com/questions/2627289/how-to-replace-a-region-in-emacs-with-yank-buffer-contents
 ;;   How to replace a region in emacs with yank buffer contents?
 ;
@@ -47,26 +55,30 @@
 ;; http://linux.seindal.dk/2004/08/07/gnu-emacs-and-utf-8-locale/
 ;
 
-;;;  http://stackoverflow.com/questions/2901541/which-coding-system-should-i-use-in-emacs
-;;
-;
-(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
-(set-language-environment 'utf-8)
-(setq locale-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-;; (set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
-;; according to online this will course copy error.
-(set-keyboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(unless (eq system-type 'windows-nt)
-(set-selection-coding-system 'utf-8))
-(prefer-coding-system 'utf-8)
+(if (eq system-type 'gnu/linux)
+    (progn
+        ;;;  http://stackoverflow.com/questions/2901541/which-coding-system-should-i-use-in-emacs
+        ;;
+        ;
+        (setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
+        (set-language-environment 'utf-8)
+        (setq locale-coding-system 'utf-8)
+        (set-default-coding-systems 'utf-8)
+        ;; (set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
+        ;; according to online this will course copy error.
+        (set-keyboard-coding-system 'utf-8)
+        (set-terminal-coding-system 'utf-8)
+        (unless (eq system-type 'windows-nt)
+        ;; (set-selection-coding-system 'utf-8))
+        (prefer-coding-system 'utf-8)
+        (set-clipboard-coding-system 'utf-8)
+     )
+)
 
 
-
-;;;
-;; open debug.
-;
-;(setq debug-on-error t)
+;; (if (eq system-type 'windows-nt)
+;;     (progn
+;;     )
+;; )
 
 (provide 'shi)
