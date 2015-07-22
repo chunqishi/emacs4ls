@@ -33,16 +33,6 @@
 (line-number-mode 1)    ; makes the line number show up
 (column-number-mode 1)  ; makes the column number show up
 
-;;;
-;; http://linux.seindal.dk/2004/08/07/gnu-emacs-and-utf-8-locale/
-;
-(setq locale-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-;; http://linux.seindal.dk/2004/08/07/gnu-emacs-and-utf-8-locale/
-
 ;;; 
 ;;
 ;
@@ -53,18 +43,26 @@
 ;(prefer-coding-system 'gb18030)
 ;(prefer-coding-system 'utf-8)
 
+;;;
+;; http://linux.seindal.dk/2004/08/07/gnu-emacs-and-utf-8-locale/
+;
+
 ;;;  http://stackoverflow.com/questions/2901541/which-coding-system-should-i-use-in-emacs
 ;;
 ;
-	(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
-	(set-language-environment 'utf-8)
-	(set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
-	(setq locale-coding-system 'utf-8)
-	(set-default-coding-systems 'utf-8)
-	(set-terminal-coding-system 'utf-8)
-	(unless (eq system-type 'windows-nt)
-	(set-selection-coding-system 'utf-8))
-	(prefer-coding-system 'utf-8)
+(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
+(set-language-environment 'utf-8)
+(setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+;; (set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
+;; according to online this will course copy error.
+(set-keyboard-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(unless (eq system-type 'windows-nt)
+(set-selection-coding-system 'utf-8))
+(prefer-coding-system 'utf-8)
+
+
 
 ;;;
 ;; open debug.
