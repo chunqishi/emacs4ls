@@ -23,6 +23,7 @@
 ;(require 'shi-cygwin)
 (require 'shi-powershell)
 (require 'shi-recentf)
+(require 'shi-indent)
 ;(require 'shi-nxhtml)
 
 

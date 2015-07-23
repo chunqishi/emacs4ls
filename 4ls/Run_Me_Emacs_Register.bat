@@ -47,9 +47,9 @@ if exist %HOME%\.latexmkrc ( rename %HOME%\.latexmkrc .latexmkrc.%APPDIX%.bak )
 if exist %HOME%\.emacs.d ( rename %HOME%\.emacs.d .emacs.d.%APPDIX%.bak )
 
 REM @COMMENT: before link the .emacs append the variable of emacs_home;
-echo.>> %BAT_HOME%\shi\.emacs
-echo (defvar lshome "%BAT_HOME%" "define lshome here") >> %BAT_HOME%\shi\.emacs
-echo.>> %BAT_HOME%\shi\.emacs
+REM echo.>> %BAT_HOME%\shi\.emacs
+REM echo (defvar lshome "%BAT_HOME%" "define lshome here") >> %BAT_HOME%\shi\.emacs
+REM echo.>> %BAT_HOME%\shi\.emacs
 
 REM @COMENT: link to the target file
 mklink %HOME%\.emacs %BAT_HOME%\shi\.emacs
