@@ -1,6 +1,3 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-
-
 ;;;
 ;; Use Aspell for spell checking
 ;

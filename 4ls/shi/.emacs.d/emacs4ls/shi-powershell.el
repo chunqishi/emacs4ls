@@ -1,5 +1,3 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-
 ;;;  http://www.emacswiki.org/emacs/PowerShell
 ;;
 ;

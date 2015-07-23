@@ -1,9 +1,9 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/auto-install/"))
+(add-to-list 'load-path (expand-file-name lslibpath "auto-install"))
 
 (require 'auto-install)
+
 (setq auto-install-directory "~/.emacs.d/shi-lisp/auto-install/")
-(setq url-proxy-services '(("http" . "proxy.kuins.net:8080")))
+(setq url-proxy-services '(("http" . "proxy.kuins.net:8080")) )
 (auto-install-compatibility-setup)
 
 ;(auto-install-from-url "https://github.com/kiwanami/emacs-deferred/raw/master/deferred.el")

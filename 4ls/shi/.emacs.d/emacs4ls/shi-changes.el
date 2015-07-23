@@ -1,4 +1,3 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
 
 ;; http://emacs-fu.blogspot.jp/2009/05/tracking-changes.html
 ;; higlight changes in documents

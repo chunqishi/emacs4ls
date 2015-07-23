@@ -1,5 +1,4 @@
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/nxhtml"))
+(add-to-list 'load-path (expand-file-name lslibpath "nxhtml"))
 
 ;; (require 'workaround-mumamo-buffer-file-name-warnings)
 
