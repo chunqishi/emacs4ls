@@ -4,8 +4,8 @@
 
 (setq auto-install-directory  (expand-file-name "~/.emacs.d/auto-install/"))
 
-(if (boundp 'http-proxy)
-  (setq url-proxy-services '(("http" . http-proxy)) ) )
+(if (boundp 'lshttpproxy)
+  (setq url-proxy-services '(("http" . lshttpproxy)) ) )
 
 (auto-install-update-emacswiki-package-name t)
 

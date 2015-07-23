@@ -4,8 +4,8 @@
 
 (require 'thesaurus)
 
-(if (boundp 'http-proxy)
-    (setq url-proxy-services (list (cons "http" http-proxy))) )
+(if (boundp 'lshttpproxy)
+    (setq url-proxy-services (list (cons "http" lshttpproxy))) )
 
 (setq thesaurus-bhl-api-key "42e1d4b5a0f8139d0dbdce6270d09443")  ;; from registration
 ;; (thesaurus-set-bhl-api-key-from-file "~/BigHugeLabs.apikey.txt")

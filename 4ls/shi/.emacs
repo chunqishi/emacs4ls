@@ -1,6 +1,6 @@
 (defvar lspath "~/.emacs.d/emacs4ls/" "The is the path for provided el files")
 
-(defvar http-proxy "165.225.96.34:10015" "change proxy here")
+(defvar lshttpproxy "165.225.96.34:10015" "change proxy here")
 
 
 (let ((default-directory lspath))
