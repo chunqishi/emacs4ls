@@ -26,6 +26,9 @@
 ;(require 'shi-nxhtml)
 
 
+(if (boundp 'lshttpproxy)
+    (setq url-proxy-services (list (cons "http" lshttpproxy))) )
+
 
 (desktop-save-mode 1)
 
