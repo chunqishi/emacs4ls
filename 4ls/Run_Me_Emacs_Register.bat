@@ -156,6 +156,9 @@ echo End!
 echo.
 
 
+color 0A
+echo Please make sure NO other emacs4ls is installed in the other place!
+
 pause > nul
 
 
