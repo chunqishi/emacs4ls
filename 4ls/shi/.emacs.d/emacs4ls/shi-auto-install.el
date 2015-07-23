@@ -2,8 +2,13 @@
 
 (require 'auto-install)
 
-(setq auto-install-directory "~/.emacs.d/shi-lisp/auto-install/")
-(setq url-proxy-services '(("http" . "proxy.kuins.net:8080")) )
+(setq auto-install-directory  (expand-file-name "~/.emacs.d/auto-install/"))
+
+(if (boundp 'http-proxy)
+  (setq url-proxy-services '(("http" . http-proxy)) ) )
+
+(auto-install-update-emacswiki-package-name t)
+
 (auto-install-compatibility-setup)
 
 ;(auto-install-from-url "https://github.com/kiwanami/emacs-deferred/raw/master/deferred.el")

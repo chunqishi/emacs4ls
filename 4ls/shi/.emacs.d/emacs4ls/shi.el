@@ -5,6 +5,8 @@
 (defvar lslibpath (expand-file-name lspath "shi-lisp") "The is the path for third-party el files")
 (add-to-list 'load-path (expand-file-name lslibpath))
 
+; (message "info: %s" lslibpath)
+
 (require 'shi-unicad)
 (require 'shi-auto-install)
 (require 'shi-auctex)
