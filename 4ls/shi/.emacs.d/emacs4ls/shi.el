@@ -8,6 +8,7 @@
 ; (message "info: %s" lslibpath)
 
 (require 'shi-unicad)
+(require 'shi-column)
 (require 'shi-auto-install)
 (require 'shi-auctex)
 (require 'shi-aspell)
