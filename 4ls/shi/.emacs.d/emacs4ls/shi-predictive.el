@@ -1,10 +1,9 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/predictive"))
+(add-to-list 'load-path (expand-file-name lslibpath "predictive"))
 
 ;; dictionary locations
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/predictive/latex"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/predictive/texinfo"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp/predictive/html"))
+(add-to-list 'load-path (expand-file-name lslibpath "predictive/latex"))
+;(add-to-list 'load-path (expand-file-name lslibpath "predictive/texinfo"))
+;(add-to-list 'load-path (expand-file-name lslibpath "predictive/html"))
 
 ;;;
 ;;  http://superuser.com/questions/326431/why-is-emacs-predictive-mode-not-working-for-latex-documents/328812#328812

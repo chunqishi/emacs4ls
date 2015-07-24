@@ -1,5 +1,5 @@
 ;;; unicad.el --- an elisp port of Mozilla Universal Charset Auto Detector
-
+;;; http://www.emacswiki.org/emacs/Unicad
 ;;;{{{  Copyright and License
 ;; Copyright (C) 2006, 2007, 2008, 2010 Qichen Huang
 ;; $Id$

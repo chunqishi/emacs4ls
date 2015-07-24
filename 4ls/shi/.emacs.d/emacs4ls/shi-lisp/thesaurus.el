@@ -1,5 +1,5 @@
 ;;; thesaurus.el --- replace a word with a synonym looked up in a web service.
-;;
+;;  http://emacswiki.org/emacs/thesaurus.el
 ;; Author: Dino Chiesa, Alex Henning
 ;; Created: Thu, 29 Mar 2012  09:18
 ;; Package-Requires: ()
@@ -255,7 +255,7 @@ This is used within `thesaurus.el' in only one case: to notify
 the user that he needs to register for an API key.
 
 "
-  (flet ((rris (a1 a2 s) (replace-regexp-in-string a1 a2 s)))
+  (cl-flet ((rris (a1 a2 s) (replace-regexp-in-string a1 a2 s)))
     (let* ((msg (format format-string args))
            (ps-cmd
             ;; This is a command to be passed on the cmd.exe line.

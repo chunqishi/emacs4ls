@@ -1,7 +1,3 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/shi-lisp"))
-
-;;(setq-default save-place t)
-(desktop-save-mode 1)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
